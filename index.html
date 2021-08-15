@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="Basic calculator built with pure javascript">
+    <title>Calculator</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+	<link href="css/style.css" rel="stylesheet">
+	<link href="css/styleColors.css" rel="stylesheet">
+  </head>
+  <body>
+	<div id="container-color" class="container container-pink">
+		<div class="top-buttons">
+			<button onclick="changeColor(this.value)" name="Pink" value="pink" title="pink" class="color-btn btn-pink"></button>
+			<button onclick="changeColor(this.value)" name="Green" value="green" title="green"  class="color-btn btn-green"></button>
+			<button onclick="changeColor(this.value)" name="Blue" value="blue" title="blue" class="color-btn btn-blue"></button>
+		</div>
+
+		<table id="table-color" class="table table-pink">
+			<thead id="thead-color" class="thead thead-pink">
+				<tr>
+					<th colspan="5" id="history" class="history"></th>
+				</tr>
+				<tr>
+					<th colspan="5" id="currentNumber" class="currentNumber">0</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td><button onclick="operations(this.value)" value="mc" class="btn btn-outline-dark btn-hover-pink">MC</button></td>
+					<td><button onclick="operations(this.value)" value="mr" class="btn btn-outline-dark btn-hover-pink">MR</button></td>
+					<td><button onclick="operations(this.value)" value="ms" class="btn btn-outline-dark btn-hover-pink">MS</button></td>
+					<td><button onclick="operations(this.value)" value="m+" class="btn btn-outline-dark btn-hover-pink">M+</button></td>
+					<td><button onclick="operations(this.value)" value="m-" class="btn btn-outline-dark btn-hover-pink">M-</button></td>
+				</tr>
+				<tr>
+					<td><button onclick="backspace()" class="btn btn-outline-dark btn-hover-pink">&larr;</button></td>
+					<td><button onclick="ce()" class="btn btn-outline-dark btn-hover-pink">CE</button></td>
+					<td><button onclick="c()" class="btn btn-outline-dark btn-hover-pink">C</button></td>
+					<!-- (-1) > reverse signal -->
+					<td><button onclick="operations(this.value)" value="(-1)" class="btn btn-outline-dark btn-hover-pink">&#177;</button></td>
+					<td><button onclick="operations(this.value)" value="sqrt" class="btn btn-outline-dark btn-hover-pink">&radic;</button></td>
+				</tr>
+				<tr>
+					<td><button onclick="selectNumber(7)" class="btn btn-outline-dark btn-hover-pink">7</button></td>
+					<td><button onclick="selectNumber(8)" class="btn btn-outline-dark btn-hover-pink">8</button></td>
+					<td><button onclick="selectNumber(9)" class="btn btn-outline-dark btn-hover-pink">9</button></td>
+					<td><button onclick="operations(this.value)" value="/" class="btn btn-outline-dark btn-hover-pink">/</button></td>
+					<td><button onclick="operations(this.value)" value="percent" class="btn btn-outline-dark btn-hover-pink">%</button></td>
+				</tr>
+				<tr>
+					<td><button onclick="selectNumber(4)" class="btn btn-outline-dark btn-hover-pink">4</button></td>
+					<td><button onclick="selectNumber(5)" class="btn btn-outline-dark btn-hover-pink">5</button></td>
+					<td><button onclick="selectNumber(6)" class="btn btn-outline-dark btn-hover-pink">6</button></td>
+					<td><button onclick="operations(this.value)" value="*" class="btn btn-outline-dark btn-hover-pink">*</button></td>
+					<td><button onclick="operations(this.value)" value="1/x" class="btn btn-outline-dark btn-hover-pink">1/x</button></td>
+				</tr>
+				<tr>
+					<td><button onclick="selectNumber(1)" class="btn btn-outline-dark btn-hover-pink">1</button></td>
+					<td><button onclick="selectNumber(2)" class="btn btn-outline-dark btn-hover-pink">2</button></td>
+					<td><button onclick="selectNumber(3)" class="btn btn-outline-dark btn-hover-pink">3</button></td>
+					<td><button onclick="operations(this.value)" value="-" class="btn btn-outline-dark btn-hover-pink">-</button></td>
+					<td><button onclick="operations(this.value)" value=",e+" class="btn btn-outline-dark btn-hover-pink">exp</button></td>
+				</tr>
+				<tr>
+					<td><button onclick="selectNumber(0)" class="btn btn-outline-dark btn-hover-pink">0</button></td>
+					<td><button onclick="operations(this.value)" value="^" class="btn btn-outline-dark btn-hover-pink">x<sup> y</sup></button></td>
+					<td><button onclick="selectNumber('.')" class="btn btn-outline-dark btn-hover-pink">,</button></td>
+					<td><button onclick="operations(this.value)" value="+" class="btn btn-outline-dark btn-hover-pink">+</button></td>
+					<td><button onclick="operations(this.value)" id="equal" value="=" class="btn btn-outline-dark btn-hover-pink">=</button></td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+    <script src="js/eventos.js"></script>
+	<script src="js/skins.js"></script>
+  </body>
+</html>

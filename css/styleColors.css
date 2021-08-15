@@ -1,0 +1,46 @@
+.btn-outline-dark{
+	border-color:#16181b;
+	color: #0a0c0d;
+}
+
+.btn-outline-dark:hover{
+	background-color: rgba(217,217,217,0.2);
+	border-color:#c0c0c0;
+}
+
+#equal:hover{
+	background-color:green;
+}
+
+
+/*		DEFAULT: PINK		*/
+
+.container-pink, .table-pink{
+	background-color: #602e39;
+}
+
+.thead-pink, .btn-pink{
+	background-color: #805861;
+}
+
+
+/*		GREEN		*/
+
+.container-green, .table-green{
+	background-color: #2d4330;
+}
+
+.thead-green, .btn-green{
+	background-color: #387105;
+}
+
+
+/*		BLUE		*/
+
+.container-blue, .table-blue{
+	background-color: #302d43;
+}
+
+.thead-blue, .btn-blue{
+	background-color:#514c71;
+}
